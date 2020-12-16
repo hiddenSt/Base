@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
     tty: true
     environment:
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=Base
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     networks:
