@@ -24,6 +24,7 @@ services:
       dockerfile: Dockerfile
     container_name: django
     command: python manage.py runserver 0.0.0.0:8000
+    tty: true
     volumes:
       - .:/code
     working_dir: /code
