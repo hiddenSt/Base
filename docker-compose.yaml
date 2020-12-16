@@ -1,0 +1,35 @@
+version: "3"
+
+networks:
+  backend:
+
+services:
+  db:
+    image: postgres
+    container_name: postgres
+    hostname: postgres
+    restart: unless-stopped
+    tty: true
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - backend
+
+
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: django
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+    - .:/code
+    working_dir: /code
+    ports:
+    - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - backend
