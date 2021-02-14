@@ -26,8 +26,8 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     tty: true
     volumes:
-      - .:/code
-    working_dir: /code
+      - .:/code/
+    working_dir: /code/
     ports:
       - "8000:8000"
     depends_on:
