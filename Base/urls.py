@@ -18,8 +18,6 @@ from django.urls import path, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 
-from .views.Querys import Querys
-
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
