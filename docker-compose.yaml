@@ -4,7 +4,7 @@ networks:
   backend:
 
 services:
-  db:
+  database:
     image: postgres
     container_name: postgres
     hostname: postgres
@@ -31,6 +31,6 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - db
+      - database
     networks:
       - backend
