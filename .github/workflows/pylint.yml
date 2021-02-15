@@ -1,11 +1,10 @@
-name: Pylint
+name: LintAndTest
 
 on:
   pull_request:
 
 jobs:
-  build:
-
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,4 +19,12 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint --disable=missing-docstring `ls -R|grep .py$|xargs`
+        python -m flake8
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and run docker-compose
+        run: docker-compose up -d --build
+      - name: test
+        run: docker-compose run --rm django python manage.py test 
