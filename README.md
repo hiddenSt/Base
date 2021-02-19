@@ -1,5 +1,5 @@
 # Base
-[![Tests](https://github.com/hiddenSt/Base/.github/workflows/lint_and_test.yml/badge.svg) ![Build Status](https://travis-ci.org/hiddenSt/Base.svg?branch=master)](https://travis-ci.org/hiddenSt/Base)
+![Tests](https://github.com/hiddenSt/Base/.github/workflows/lint_and_test.yml/badge.svg) [![Build Status](https://travis-ci.org/hiddenSt/Base.svg?branch=master)](https://travis-ci.org/hiddenSt/Base)
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
 * Docker
