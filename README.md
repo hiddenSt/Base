@@ -23,7 +23,7 @@ Now you can interract with app through `127.0.0.1:8000`
 
 ## Contributing to Base
 To contribute to Base, follow these steps:
-1. Fork this repository if you don't have access to contribute directly
+1. Fork this repository if you are not collaborator
 2. Create a branch: `git checkout -b <branch_name>`
 3. Make your changes and commit them
 4. Push your branch to repository
