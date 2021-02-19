@@ -1,5 +1,6 @@
 # Base
-![Tests](https://github.com/hiddenSt/Base/workflows/.github/workflows/lint_and_test.yml/badge.svg) [![Build Status](https://travis-ci.org/hiddenSt/Base.svg?branch=master)](https://travis-ci.org/hiddenSt/Base)
+![example workflow file path](https://github.com/actions/hello-world/workflows/.github/workflows/main.yml/badge.svg)
+[![Build Status](https://travis-ci.org/hiddenSt/Base.svg?branch=master)](https://travis-ci.org/hiddenSt/Base)
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
 * Docker
