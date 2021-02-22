@@ -5,7 +5,6 @@ Before you begin, ensure you have met the following requirements:
 * Docker
 * Docker-compose
 * Python 3.8 or newer
-* Python virtual envoirement dir called "venv
 
 ## Using Base
 
@@ -23,10 +22,10 @@ Now you can interract with app through `127.0.0.1:8000`
 
 ## Contributing to Base
 To contribute to Base, follow these steps:
-1. Fork this repository if you are not collaborator
+1. Fork this repository if you are not a collaborator
 2. Create a branch: `git checkout -b <branch_name>`
 3. Make your changes and commit them
-4. Push your branch to repository
+4. Push your branch to the repository
 5. Create the pull request
 
 
