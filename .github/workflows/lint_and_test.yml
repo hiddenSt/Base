@@ -30,4 +30,9 @@ jobs:
       - name: Build and run docker-compose
         run: docker-compose up -d --build
       - name: test
-        run: docker-compose run --rm django python manage.py test 
+        run: docker-compose run --rm django python manage.py test
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+    
