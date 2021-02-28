@@ -6,3 +6,4 @@ class RequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = RequestModel
         fields = ['time', 'text', 'user']
+
