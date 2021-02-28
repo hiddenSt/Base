@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-class Request(models.Model):
+class RequestModel(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField(blank=False, max_length=100)
     time = models.DateTimeField(auto_created=True, auto_now_add=True)
