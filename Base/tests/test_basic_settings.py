@@ -2,5 +2,5 @@ from django.test import TestCase
 
 
 class BaseTestCase(TestCase):
-    def simple_test(self):
+    def test_simple(self):
         self.assertTrue(True)
