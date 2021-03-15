@@ -5,4 +5,4 @@ from Base.models.request_model import RequestModel
 class RequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = RequestModel
-        fields = ['time', 'text', 'user']
+        fields = ['timestamp', 'text', 'user']
