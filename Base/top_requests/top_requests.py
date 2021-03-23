@@ -1,4 +1,4 @@
-from RequestApp.models.request_model import RequestModel
+from Base.models.request_model import RequestModel
 
 
 def get_top():
