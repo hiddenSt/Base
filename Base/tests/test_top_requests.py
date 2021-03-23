@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 
 from Base.models.request_model import RequestModel
-from Base.services.top_requests import get_top
+from Base.top_requests.top_requests import get_top
 
 
 class TopRequestsTest(TestCase):
