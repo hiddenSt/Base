@@ -3,12 +3,9 @@
 
 import configparser
 import json
-from telethon import TelegramClient
 from telethon.errors import SessionPasswordNeededError
 from telethon.sync import TelegramClient
 from telethon import functions, types
-import asyncio
-import re
 
 
 class TelegramApiWrapper:
@@ -43,17 +40,20 @@ class TelegramApiWrapper:
             full_result = self.client(functions.channels.GetFullChannelRequest(
                 channel=chat.id
             ))
-            result_dict = {"title": chat.title, "members": chat.participants_count, "link": "t.me/" + chat.username,
+            result_dict = {"title": chat.title,
+                           "members": chat.participants_count,
+                           "link": "t.me/" + chat.username,
                            "channel_info": full_result.full_chat.about}
             result_str = result_dict['link']
             self.send_messages("@hiddenSt1", result_str)  # временная помойка
-            # self.send_message(user.telegram_name, result_str) когда будем получать имя пользователя в телеге
+            # self.send_message(user.telegram_name, result_str) 
+            # когда будем получать имя пользователя в телеге
             channel_list.append(result_dict)
         channels_json = json.dumps(channel_list, indent=4)
         return channels_json
 
     def send_messages(self, username, message):
-        result = self.client(functions.messages.SendMessageRequest(
+        self.client(functions.messages.SendMessageRequest(
             peer=username,
             message=message
         ))
