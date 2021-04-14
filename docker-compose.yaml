@@ -17,7 +17,6 @@ services:
     networks:
       - backend
 
-
   django:
     build:
       context: .

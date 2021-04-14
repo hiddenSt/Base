@@ -1,0 +1,45 @@
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.request import Request
+
+
+class Health(APIView):
+    def head(self):
+        return Response(200)
+
+
+class Users(APIView):
+    def get(self, request: Request):
+        return Response("Not implemented", status=500)
+
+    def post(self, request: Request):
+        return Response("Not implemented", status=500)
+
+    def put(self, request: Request):
+        return Response("Not implemented", status=500)
+
+    def delete(self, requet: Request):
+        return Response("Not implemented", status=500)
+
+
+class Requests(APIView):
+    def post(self, request: Request):
+        return Response("Not implemented", status=500)
+
+
+class RequestsHistory(APIView):
+    def get(self, request: Request):
+        return Response("Not implemented", status=500)
+
+
+class RequestsRating(APIView):
+    def get(self, request: Request):
+        return Response("Not implemented", status=500)
+
+
+class Tokens(APIView):
+    def post(self, request: Request):
+        return Response("Not implemented", status=500)
+
+    def put(self, request: Request):
+        return Response("Not implemented", status=500)
