@@ -8,4 +8,4 @@ class RequestSerializer(serializers.Serializer):
     def validate(self, data):
         if not data['request_params']:
             raise serializers.ValidationError("Required")
-        return
+        return data
