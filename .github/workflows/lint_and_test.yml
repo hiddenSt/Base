@@ -29,5 +29,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build and run docker-compose
         run: docker-compose up -d --build
-      - name: test
+      - name: migrations
+        run: docker-compose run --rm django python manage.py migrate
+      - name: tests
         run: docker-compose run --rm django python manage.py test
