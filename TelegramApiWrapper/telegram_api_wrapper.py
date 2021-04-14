@@ -5,7 +5,7 @@ import configparser
 import json
 from telethon.errors import SessionPasswordNeededError
 from telethon.sync import TelegramClient
-from telethon import functions, types
+from telethon import functions
 
 
 class TelegramApiWrapper:
@@ -46,7 +46,7 @@ class TelegramApiWrapper:
                            "channel_info": full_result.full_chat.about}
             result_str = result_dict['link']
             self.send_messages("@hiddenSt1", result_str)  # временная помойка
-            # self.send_message(user.telegram_name, result_str) 
+            # self.send_message(user.telegram_name, result_str)
             # когда будем получать имя пользователя в телеге
             channel_list.append(result_dict)
         channels_json = json.dumps(channel_list, indent=4)
