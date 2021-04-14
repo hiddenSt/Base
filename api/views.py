@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.request import Request
+from .serializers import RequestSerializer
 
 
 class Health(APIView):
@@ -24,7 +25,9 @@ class Users(APIView):
 
 class Requests(APIView):
     def post(self, request: Request):
-        return Response("Not implemented", status=500)
+        serialized_request = RequestSerializer(data=request)
+        serialized_request.is_valid(raise_exception=True)
+        return Response("Not implemented", status=200, content_type='application/json')
 
 
 class RequestsHistory(APIView):
