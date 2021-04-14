@@ -12,9 +12,13 @@ class VkApiWrapper:
             return
 
     def search(self, params: str):
-        result = self.vk.search.getHints(q=params)
+        response = self.vk.search.getHints(q=params)
+        result = self.create_dict_from_response(response)
+        return result
+
+    def create_dict_from_response(self, response):
         result_list = []
-        for item in result['items']:
+        for item in response['items']:
             if item['type'] == 'group':
                 group_item = item['group']
                 result_dict = {'title': group_item['name'],
