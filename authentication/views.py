@@ -8,4 +8,4 @@ class RegisterView(APIView):
 
         # Creates new user and generates JWT Token
 
-        return  Response()
+        return Response()

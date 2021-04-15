@@ -27,7 +27,8 @@ class Requests(APIView):
     def post(self, request: Request):
         serialized_request = RequestSerializer(data=request)
         serialized_request.is_valid(raise_exception=True)
-        return Response("Not implemented", status=500, content_type='application/json')
+        return Response("Not implemented", status=500,
+                        content_type='application/json')
 
 
 class RequestsHistory(APIView):
