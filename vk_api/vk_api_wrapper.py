@@ -5,11 +5,7 @@ class VkApiWrapper:
     def __init__(self, phone_number: str, password: str):
         self.vk_session = vk_api.VkApi(phone_number, password)
         self.vk = self.vk_session.get_api()
-        try:
-            self.vk_session.auth(token_only=True)
-        except vk_api.AuthError as error_msg:
-            print(error_msg)
-            return
+        self.vk_session.auth(token_only=True)
 
     def search(self, params: str):
         response = self.vk.search.getHints(q=params)
