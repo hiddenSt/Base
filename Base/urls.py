@@ -3,6 +3,6 @@ from api import urls
 
 
 urlpatterns = [
-    path('', include('api.urls')),
+    path('api/', include('api.urls')),
     path('api/', include('authentication.urls'))
 ]

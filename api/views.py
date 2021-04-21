@@ -41,9 +41,3 @@ class RequestsRating(APIView):
         return Response("Not implemented", status=500)
 
 
-class Tokens(APIView):
-    def post(self, request: Request):
-        return Response("Not implemented", status=500)
-
-    def put(self, request: Request):
-        return Response("Not implemented", status=500)
