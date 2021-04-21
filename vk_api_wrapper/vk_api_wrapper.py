@@ -1,9 +1,9 @@
-import vk_api
+import vk_api_wrapper
 
 
 class VkApiWrapper:
     def __init__(self, phone_number: str, password: str):
-        self.vk_session = vk_api.VkApi(phone_number, password)
+        self.vk_session = vk_api_wrapper.VkApi(phone_number, password)
         self.vk = self.vk_session.get_api()
         self.vk_session.auth(token_only=True)
 
