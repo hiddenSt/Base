@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import configparser
-import json
 from telethon.errors import SessionPasswordNeededError
 from telethon.sync import TelegramClient
 from telethon import functions
@@ -42,7 +41,8 @@ class TelegramApiWrapper:
             full_result = self.client(functions.channels.GetFullChannelRequest(
                 channel=channel.id
             ))
-            channel_dict = self.create_dict(channel, full_result.full_chat.about)
+            channel_dict = self.create_dict(channel,
+                                            full_result.full_chat.about)
             links += "\n" + channel_dict['link']
             channels_dicts.append(channel_dict)
             counter += 1

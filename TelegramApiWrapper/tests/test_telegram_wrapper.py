@@ -15,11 +15,9 @@ class WrapperTestCase(TestCase):
         self.telegram = TelegramApiWrapper()
 
     def test_search_channels(self):
-        result = self.telegram.search_channels("python")
-        result_b = False
-        if result[0]['title'].find("python"):
-            result_b = True
-        self.assertTrue(result_b)
+        query = "python"
+        result = self.telegram.search_channels(query)
+        self.assertTrue(result[0]['title'].find(query))
 
     def test_create_dict(self):
         correct_dict = {'title': "title",
