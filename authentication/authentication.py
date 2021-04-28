@@ -9,8 +9,6 @@ import jwt
 from .models import User
 
 
-
-
 class JWTAAccessAuthentication(authentication.BaseAuthentication):
     def authenticate(self, request):
         token = request.META.get('Authorization')
