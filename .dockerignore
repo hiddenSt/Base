@@ -1,0 +1,6 @@
+.idea/
+.travis.yml
+autopep8.sh
+.gitignore
+.flake8
+README.md
