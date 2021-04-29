@@ -49,4 +49,3 @@ class LoginTests(APITestCase, URLPatternsTestCase, TransactionTestCase):
         response = self.client.post(url, format='json', request=request)
         self.assertEqual(response.status_code,
                          status.HTTP_200_OK)
-
