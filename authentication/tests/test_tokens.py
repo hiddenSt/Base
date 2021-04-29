@@ -4,6 +4,7 @@ from django.urls import include, path, reverse
 from django.test import TransactionTestCase
 from ..models import User
 
+
 class LoginTests(APITestCase, URLPatternsTestCase, TransactionTestCase):
     urlpatterns = [
         path('api/', include('authentication.urls'))
