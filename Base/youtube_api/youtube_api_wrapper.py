@@ -1,4 +1,3 @@
-import json
 from googleapiclient.discovery import build
 import environ
 
@@ -45,4 +44,4 @@ class YoutubeApiWrapper:
                 youtube_data.setdefault('channel {number}'.format(
                     number=number), channel_data)
                 number += 1
-        return json.dumps(youtube_data, indent=4)
+        return youtube_data
