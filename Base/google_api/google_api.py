@@ -34,4 +34,4 @@ class GoogleBookApiWrapper:
                         volume_info.get('description')
                     }
             all_books.append(data)
-        return json.dumps(all_books)
+        return all_books
