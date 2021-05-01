@@ -8,7 +8,7 @@ class YoutubeApiWrapperTestCase(TestCase):
     def setUp(self):
         self.wrapper = YoutubeApiWrapper()
 
-    def test_search_channels(self):
+    def test_wrapper_get_response(self):
         self.wrapper.search_youtube_channels_by_keyword(self.TEST_CHANNEL_TITLE)
         self.assertTrue(self.wrapper.youtube_channel_list_data)
 
