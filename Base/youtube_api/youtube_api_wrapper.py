@@ -19,7 +19,7 @@ class YoutubeApiWrapper:
                                                     maxResults=maxChannelCount)
         self.youtube_channel_list_data = request.execute()
 
-    def get_detail_channel_info_by_channel_id(self, channel_id):
+    def __get_detail_channel_info_by_channel_id(self, channel_id):
         return self.youtube_object.channels().list(part='snippet, statistics',
                                                    id=channel_id).execute()
 
@@ -27,7 +27,7 @@ class YoutubeApiWrapper:
         youtube_data = {}
         number = 0
         for channel in self.youtube_channel_list_data['items']:
-            detail_channel_info = self.get_detail_channel_info_by_channel_id(
+            detail_channel_info = self.__get_detail_channel_info_by_channel_id(
                 channel['id']['channelId'])
             if not detail_channel_info['items'][0]['statistics']['hiddenSubscriberCount']:
                 channel_data = {
