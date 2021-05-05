@@ -46,8 +46,8 @@ class RegistrationTests(APITestCase, URLPatternsTestCase, TransactionTestCase):
 
     def test_returns_correct_response_body_if_request_is_valid(self):
         url = reverse('authentication:register')
-        request = {'email': 'email@email.com', 'username': 'user1214',
-                   'password': 'Pass1234'}
+        request = {'user': {'email': 'email@email.com', 'username': 'user1214',
+                   'password': 'Pass1234'}}
         response = self.client.post(url, format='json', request=request)
         self.assertEqual(response.data, {
                              'email': request['email'],

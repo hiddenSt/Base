@@ -4,6 +4,7 @@ from django.urls import include, path, reverse
 from django.test import TransactionTestCase
 from ..models import User
 
+
 class LoginTests(APITestCase, URLPatternsTestCase, TransactionTestCase):
     urlpatterns = [
         path('api/', include('authentication.urls'))
@@ -49,4 +50,3 @@ class LoginTests(APITestCase, URLPatternsTestCase, TransactionTestCase):
         response = self.client.post(url, format='json', request=request)
         self.assertEqual(response.status_code,
                          status.HTTP_200_OK)
-
