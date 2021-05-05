@@ -33,3 +33,8 @@ services:
       - database
     networks:
       - backend
+
+  rabbitmq:
+    image: rabbitmq:3.8.16
+    depends_on:
+      - django
