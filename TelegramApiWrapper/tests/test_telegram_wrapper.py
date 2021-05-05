@@ -25,7 +25,7 @@ class WrapperTestCase(TestCase):
     def test_can_call_method_create_dict(self):
         try:
             channel = Channel()
-            result_dict = self.telegram.create_dict(channel, channel.channel_info)
+            self.telegram.create_dict(channel, channel.channel_info)
         except BaseException:
             self.fail("create_dict raised ThatException")
 
